@@ -1,3 +1,8 @@
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+
+-- switch to the database created
+-- \c alx_book_store
+
 -- Create the Authors table first, as it is referenced by Books
 CREATE TABLE Authors (
     author_id SERIAL PRIMARY KEY,
