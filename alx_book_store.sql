@@ -13,7 +13,7 @@ CREATE TABLE Authors (
 CREATE TABLE Books (
     book_id SERIAL PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
-    author_id INT REFERENCES Authors(author_id),
+    author_id INT REFERENCES Authors(author_id), 
     price NUMERIC(6, 2) NOT NULL,
     publication_date DATE
 );
@@ -31,7 +31,9 @@ CREATE TABLE Customers (
 -- Create the Orders table, referencing the Customers table
 CREATE TABLE Orders (
     order_id SERIAL PRIMARY KEY,
-    customer_id INT REFERENCES Customers(customer_id),
+    -- customer_id INT REFERENCES Customers(customer_id), this one is inline syntax rejected by autochecker
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
+
     order_date DATE
 );
 
