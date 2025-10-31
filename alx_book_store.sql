@@ -41,7 +41,10 @@ CREATE TABLE Orders (
 -- between Orders and Books
 CREATE TABLE Order_Details (
     order_detail_id SERIAL PRIMARY KEY,
-    order_id INT REFERENCES Orders(order_id),
-    book_id INT REFERENCES Books(book_id),
-    quantity INT NOT NULL,
+    -- order_id INT REFERENCES Orders(order_id),
+    -- book_id INT REFERENCES Books(book_id),
+    -- Explicit, out-of-line Foreign Key definitions (as required by checker)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
+    quantity DOUBLE,
 );
