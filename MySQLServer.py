@@ -16,6 +16,7 @@ SERVER_CONN_CONFIG = {
 }
 
 NEW_DATABASE_NAME = "alx_book_store" # The database name
+DB_CREATE_SQL = f"CREATE DATABASE IF NOT EXISTS alx_book_store"
 
 
 # this function will take the SERVER_CONN_CONFIG to connect to mysql and NEW_DATABASE_NAME
@@ -38,8 +39,7 @@ def create_database(config, db_name):
         cursor = connection.cursor()
 
         # 2. Execute the CREATE DATABASE IF NOT EXISTS command
-        create_db_query = f"CREATE DATABASE IF NOT EXISTS {db_name}"
-        cursor.execute(create_db_query)
+        cursor.execute(DB_CREATE_SQL)
 
         success_message = f'Database {db_name} created successfully!'
         print(success_message)
