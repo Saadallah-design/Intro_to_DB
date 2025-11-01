@@ -4,6 +4,8 @@
 -- in the alx_book_store database without using DESCRIBE or EXPLAIN.
 
 -- Get the structure of the Books table
+USE alx_book_store;
+
 SHOW COLUMNS FROM Books;
 
 
