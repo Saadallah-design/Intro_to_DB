@@ -6,10 +6,8 @@
 -- Now using Advanced Schema Query
 -- This statement works by querying MySQL's own internal metadata dictionary, which is stored in a special database called INFORMATION_SCHEMA. Think of INFORMATION_SCHEMA as the central library containing the blueprint for every database and table on your server.
 
--- Script for books full description
 USE alx_book_store;
 
--- Show the full description of the books table
 SELECT 
     COLUMN_NAME,
     COLUMN_TYPE,
@@ -18,7 +16,7 @@ SELECT
     COLUMN_DEFAULT,
     EXTRA
 FROM INFORMATION_SCHEMA.COLUMNS 
-WHERE TABLE_NAME = 'books' AND TABLE_SCHEMA = 'alx_book_store'
+WHERE TABLE_NAME = 'Books' AND TABLE_SCHEMA = 'alx_book_store'
 ORDER BY ORDINAL_POSITION;
 
 
