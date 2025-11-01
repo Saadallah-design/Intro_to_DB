@@ -5,7 +5,7 @@
 
 -- Get the structure of the Books table
 
-SHOW COLUMNS FROM Books;
+SHOW COLUMNS FROM books;
 
 
 -- SHOW COLUMNS FROM Authors;
