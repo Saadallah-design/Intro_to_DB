@@ -1,0 +1,19 @@
+# ------------------------------------
+# Environment/Secrets (DO NOT COMMIT!)
+# ------------------------------------
+.env
+
+# ------------------------------------
+# Python Specific Files
+# ------------------------------------
+# Virtual environment folder
+.venv/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+
+# ------------------------------------
+# Custom Files to Ignore
+# ------------------------------------
+PreviousMySQLServer.py
