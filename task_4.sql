@@ -1,7 +1,6 @@
--- The standard command to get the description of tables is to use DESCRIBE Authors etc
 
 -- This script retrieves the structure of all primary tables
--- in the alx_book_store database without using DESCRIBE or EXPLAIN.
+-- in the alx_book_store database without using DESC/RIBE or EXP/LAIN.
 
 -- Now using Advanced Schema Query
 -- This statement works by querying MySQL's own internal metadata dictionary, which is stored in a special database called INFORMATION_SCHEMA. Think of INFORMATION_SCHEMA as the central library containing the blueprint for every database and table on your server.
